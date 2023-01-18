@@ -8,19 +8,21 @@ body {
 /* Fin body */
 
 /* Inicio Header */
-
+header{
+    margin-top: 20px;
+}
 .texto_header {
     color: #0A3871;
     font-weight: 500;
 }
 
 .texto_header:hover {
-    color: navy;
+    color: rgb(93, 4, 4);
     cursor: pointer;
 }
 
 .logo {
-    animation: puff-in-center 2.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: puff-in-center 2.5s cubic-bezier(0.470, 0.500, 0.745, 0.715) both;
 }
 
 @keyframes puff-in-center {
@@ -41,7 +43,7 @@ body {
 
 /* Inicio Contenedor Izquierda */
 
-.textoEntrada {
+.Texto_A_Ingresar {
     height: 24.3rem;
     width: 22rem;
     font-size: 1.5rem;

@@ -1,7 +1,5 @@
-// Inicio
 
-const logo = document.getElementById ("logo");
-const textoEntrada = document.getElementById ("textoEntrada");
+const Texto_A_Ingresar = document.getElementById ("Texto_A_Ingresar");
 const munieco = document.getElementById ("munieco");
 const Rectangle1_texto1 = document.getElementById ("Rectangle1_texto1");
 const Rectangle1_texto2 = document.getElementById ("Rectangle1_texto2");
@@ -21,20 +19,17 @@ function RemoverDefault () {
 
 function Encriptar () {
 
-    let texto = textoEntrada.value;
+    let texto = Texto_A_Ingresar.value;
     let textoMinusculas = texto.toLowerCase();
 
     if (textoMinusculas == "" || textoMinusculas == +textoMinusculas) {
 
         alert ("No hay texto para encriptar o se ingresó un valor numerico.");
-        window.location.reload ();
-
     } else {
 
         RemoverDefault ();
         let textoEncriptado = textoMinusculas.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
         textarea.value = textoEncriptado;
-        textarea.spellcheck = false;
         textarea.className = "textoSalida";
         Frame5.append (textarea);
         botonCopiar.className = "btn_co";
@@ -56,7 +51,7 @@ function Encriptar () {
 
 function Desencriptar () {
 
-    let texto = textoEntrada.value;
+    let texto = Texto_A_Ingresar.value;
     let textoMinusculas = texto.toLowerCase();
 
     if (textoMinusculas == "" || textoMinusculas == +textoMinusculas) {
@@ -92,17 +87,3 @@ function Desencriptar () {
 
 botonEncriptar.addEventListener ("click", Encriptar);
 botonDesencriptar.addEventListener ("click", Desencriptar);
-
-window.addEventListener('DOMContentLoaded', () => {
-
-    logo.onmouseenter = () => {
-    logo.src = "logo2.svg"
-    };
-        
-    logo.onmouseleave = () => {
-        logo.src = "logo.svg"
-    };
-
-});
-
-// Fin
